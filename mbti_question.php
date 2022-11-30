@@ -159,8 +159,9 @@
         }
         ?>
     </div>
-
-
+    <div style="text-align:center; margin-top:50px;">
+        <a href="mbti_question_form.php"><img src="./img/back.png"></a>
+    </div>
 </body>
 
 </html>
