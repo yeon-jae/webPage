@@ -11,10 +11,12 @@
 <body>
     <?php
     //라디오 버튼에서 선택된 데이터 처리하기 
+    $mbti_id = $_GET["mbti_id"];;
     $character = $_POST["character"];
     $intuition = $_POST["intuition"];
     $feelings = $_POST["feelings"];
     $plan = $_POST["plan"];
+
     //결과 보여주기 
     if ($character == "E" && $intuition == "S" && $feelings == "T" && $plan == "J") {
         $mbti = "ESTJ";
@@ -65,7 +67,15 @@
     if ($character == "I" && $intuition == "N" && $feelings == "F" && $plan == "P") {
         $mbti = "INFP";
     }
-
+    $con = mysqli_connect("localhost", "user1", "12345", "sample");
+    $sql = "select * from mbti where mbti_id='$mbti_id'";
+    $result = mysqli_query($con, $sql);
+    $num_record = mysqli_num_rows($result);
+    if ($num_record) {
+        $sql = "update mbti SET rmbti='$mbti' where mbti_id ='$mbti_id'";
+        mysqli_query($con, $sql);
+    }
+    mysqli_close($con);
 
 
 
