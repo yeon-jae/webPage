@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--googleFont-->
+    <!--GothicA1-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200;300&display=swap" rel="stylesheet">
+      <!--Parisienne-->    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200;300&family=Parisienne&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+    <!--Prata-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+   
+   <style>
+        /*nav 스타일*/
+        .navigation{
+            position: fixed;
+            background-color: #99A799;
+            width: 100%;
+            padding:10px;
+            z-index: 1; /*네비랑 이미지랑 충돌 안나게*/
+        } 
+        .nav-item, .navbar-brand{
+            margin-left: 10px;
+        }
+        /*nav 스타일 끝*/
+
+        /*body스타일*/
+        body{
+            background-color:#FEF5ED;
+        }
+        .bg-dark py-5{
+            background-color: #99A799;
+        }
+        h1{
+            font-family: 'Prata', serif;
+        }
+        p,h5,h6{
+            font-family: 'Gothic A1', sans-serif;
+        }
+
+    </style>
+    <title>SHOP</title>
+  </head>
+
+  <body>
+<!--Nav-->
+        <div class="navigation">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="./index.html">HOME</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./info.html">INFO</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" href="./shop.html">SHOP</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" href="./history.html">HISTORY</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" href="./recommed.html">RECOMMENDATION</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" href="./contact.html">CONTACT&MY</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+            </nav>
+        </div>
+<!--Nav끝-->
+<!--상품소개-->
+ <!-- Header-->
+         <header style="background-color:#99A799;"class="py-5">
+            <div class="container px-4 px-lg-5 my-5">
+                <div style="color:#FEF5ED" class="text-center">
+                    <br>
+                    <h1 class="display-4 fw-bolder">Fragrantize Shop</h1>
+                    <p class="lead fw-normal text-white-50 mb-0">마음에 드는 향수를 골라보세요!</p><br>
+                    <h6 class="text-white-50"><버튼 클릭 시, 구매 페이지로 이동합니다></h6>
+                </div>
+            </div>
+        </header>
+<!-- Section-->
+        <section class="py-5">
+            <div class="container px-4 px-lg-5 mt-5">
+                <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
+            <!--남자 향수-->
+                    <!--1번째-->
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!--이미지-->
+                            <img class="card-img-top" src="./image/shop_1.png" alt="향수" />
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!--향수이름-->
+                                    <h5 class="fw-bolder">크리드<br>어벤투스</h5>
+                                       <!--노트-->
+                                       <b>top:</b> 베르가못, 사과 <br>
+                                       <b>middle:</b> 쟈스민, 파츌리<br>
+                                      <b>base:</b> 머스크,앰버    
+                                </div>
+                            </div>
+                        <!--구매페이지로 이동, 쿠팡이랑 연결-->
+                        <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="https://www.coupang.com/np/search?q=creed%20aventus&src=1139000&spec=10799999&addtag=200&ctag=creed%20aventus&lptag=AF1543738&itime=20230618025812&pageType=SEARCH&pageValue=creed%20aventus&wPcid=16791076698249890012675&wRef=easykook.tistory.com&wTime=20230618025812&redirect=landing&traceid=V0-181-396e64a24fdb01ae&mcid=5f952ad3dbcd4ff9bef1987be80a1783&placementid=&campaignid=&contentcategory=&imgsize=&tsource=&pageid=&deviceid=&token=&contenttype=&subid=&campaigntype=&requestid=&contentkeyword=&subparam=">
+                            자세히 알아보기</a></div>
+                    </div>
+                </div>
+                    </div>
+                    <!--2번째-->
+                     <div class="col mb-5">
+                        <div class="card h-100">
+                            <!--이미지-->
+                            <img class="card-img-top" src="./image/shop_5.png" alt="향수" />
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!--향수이름-->
+                                    <h5 class="fw-bolder">바이레도<br>블랑쉬</h5>
+                                       <!--노트-->
+                                        <b>top:</b>핑크페퍼,화이트로즈<br>
+                                        <b>middle:</b>네롤리, 바이올렛<br>
+                                        <b>base:</b> 머스크, 샌달우드  
+                                </div>
+                            </div>
+                            <!--구매페이지로 이동, 쿠팡이랑 연결-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="https://www.coupang.com/np/search?q=byredo%20blanche&src=1139000&spec=10799999&addtag=200&ctag=byredo%20blanche&lptag=AF1543738&itime=20230618032015&pageType=SEARCH&pageValue=byredo%20blanche&wPcid=16791076698249890012675&wRef=easykook.tistory.com&wTime=20230618032015&redirect=landing&traceid=V0-181-277339388e60f884&mcid=cea1f1b27121427cb7af738df75c9e3a&placementid=&campaignid=&contentcategory=&imgsize=&tsource=&pageid=&deviceid=&token=&contenttype=&subid=&campaigntype=&requestid=&contentkeyword=&subparam=">
+                                    자세히 알아보기</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--3번째-->
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!--이미지-->
+                            <img class="card-img-top" src="./image/shop_3.png" alt="향수" />
+                            <div class="card-body p-4">
+                        <div class="text-center">
+                            <!--향수이름-->
+                            <h5 class="fw-bolder">크리드 <br>실버마운틴 워터</h5>
+                               <!--노트-->
+                                <b>top:</b> 베르가못,만다린<br>
+                                <b>middle:</b>블랙커런트<br>
+                                <b>base:</b> 머스크,샌달우드    
+                        </div>
+                            </div>
+                            <!--구매페이지로 이동, 쿠팡이랑 연결-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="https://www.coupang.com/np/search?q=creed%20silver&src=1139000&spec=10799999&addtag=200&ctag=creed%20silver&lptag=AF1543738&itime=20230618031624&pageType=SEARCH&pageValue=creed%20silver&wPcid=16791076698249890012675&wRef=easykook.tistory.com&wTime=20230618031624&redirect=landing&traceid=V0-181-f663754a04e86f23&mcid=525148d1acc145e396af9fcd53d48853&placementid=&campaignid=&contentcategory=&imgsize=&tsource=&pageid=&deviceid=&token=&contenttype=&subid=&campaigntype=&requestid=&contentkeyword=&subparam=">
+                            자세히 알아보기</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--4번째-->
+                    <div class="col mb-5">
+                <div class="card h-100">
+                    <!--이미지-->
+                    <img class="card-img-top" src="./image/shop_4.png" alt="향수" />
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!--향수이름-->
+                            <h5 class="fw-bolder">조말론<br>다크앰버&진저릴리</h5>
+                               <!--노트-->
+                                <b>top:</b>진저, 블랙카다멈<br>
+                                <b>middle:</b>수련, 재스민<br>
+                                <b>base:</b> 키아라 인센스   
+                        </div>
+                    </div>
+                    <!--구매페이지로 이동, 쿠팡이랑 연결-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="https://www.coupang.com/np/search?q=jo%20dark%20amber&src=1139000&spec=10799999&addtag=200&ctag=jo%20dark%20amber&lptag=AF1543738&itime=20230618031725&pageType=SEARCH&pageValue=jo%20dark%20amber&wPcid=16791076698249890012675&wRef=easykook.tistory.com&wTime=20230618031725&redirect=landing&traceid=V0-181-eb0000b462a52875&mcid=675bb3b3a02a42bba39c05111ef76731&placementid=&campaignid=&contentcategory=&imgsize=&tsource=&pageid=&deviceid=&token=&contenttype=&subid=&campaigntype=&requestid=&contentkeyword=&subparam=">
+                            자세히 알아보기</a></div>
+                    </div>
+                </div>
+                    </div>
+                    <!--5번째-->
+                    <div class="col mb-5">
+                <div class="card h-100">
+                    <!--이미지-->
+                    <img class="card-img-top" src="./image/shop_2.png" alt="향수" />
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!--향수이름-->
+                            <h5 class="fw-bolder">톰포드 <br>오드우드</h5>
+                        </div>
+                    </div>
+                    <!--구매페이지로 이동, 쿠팡이랑 연결-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="https://www.coupang.com/np/search?q=tomford%20wood&src=1139000&spec=10799999&addtag=200&ctag=tomford%20wood&lptag=AF1543738&itime=20230618031039&pageType=SEARCH&pageValue=tomford%20wood&wPcid=16791076698249890012675&wRef=easykook.tistory.com&wTime=20230618031039&redirect=landing&traceid=V0-181-4b191972c6f1097e&mcid=883ba8ea1d1f464eb5484218392de7ba&placementid=&campaignid=&contentcategory=&imgsize=&tsource=&pageid=&deviceid=&token=&contenttype=&subid=&campaigntype=&requestid=&contentkeyword=&subparam=">
+                            자세히 알아보기</a></div>
+                    </div>
+                </div>
+                    </div>
+                     <!--6번째-->
+                     <div class="col mb-5">
+                <div class="card h-100">
+                    <!--이미지-->
+                    <img class="card-img-top" src="./image/shop_11.png" alt="향수" />
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!--향수이름-->
+                            <h5 class="fw-bolder">베르사체<br>에로스 맨 오드뚜왈렛</h5>
+                        </div>
+                    </div>
+                    <!--구매페이지로 이동, 쿠팡이랑 연결-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="https://www.coupang.com/vp/products/1499510676?itemId=2575024311&vendorItemId=3000274063&q=men%27s+perfume&itemsCount=36&searchId=35c1448cb9be49948d7dcd5bf7b4664d&rank=6&isAddedCart=">
+                            자세히 알아보기</a></div>
+                    </div>
+                </div>
+                    </div>
+                     <!--7번째-->
+                    <div class="col mb-5">
+                <div class="card h-100">
+                    <!--이미지-->
+                    <img class="card-img-top" src="./image/shop_12.png" alt="향수" />
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!--향수이름-->
+                            <h5 class="fw-bolder">페라리<br>블랙 오드뚜왈렛</h5>
+                        </div>
+                    </div>
+                    <!--구매페이지로 이동, 쿠팡이랑 연결-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="https://www.coupang.com/vp/products/105449963?itemId=319607882&vendorItemId=3000047155&q=men%27s+perfume&itemsCount=36&searchId=35c1448cb9be49948d7dcd5bf7b4664d&rank=3&isAddedCart=">
+                            자세히 알아보기</a></div>
+                    </div>
+                </div>
+                    </div>
+                      <!--8번째-->
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!--이미지-->
+                            <img class="card-img-top" src="./image/shop_13.png" alt="향수" />
+                            <div class="card-body p-4">
+                        <div class="text-center">
+                            <!--향수이름-->
+                            <h5 class="fw-bolder">존바바토스<br>아티산 EDT</h5>
+                        </div>
+                            </div>
+                            <!--구매페이지로 이동, 쿠팡이랑 연결-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="https://www.coupang.com/vp/products/345494284?itemId=2554413862&vendorItemId=3002625520&q=men%27s+perfume&itemsCount=36&searchId=35c1448cb9be49948d7dcd5bf7b4664d&rank=17&isAddedCart=">
+                            자세히 알아보기</a></div>
+                            </div>
+                        </div>
+                    </div>
+            <!--여자 향수-->
+                 <!--9번째-->
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                    <!--이미지-->
+                    <img class="card-img-top" src="./image/shop_6.png" alt="향수" />
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!--향수이름-->
+                            <h5 class="fw-bolder">바이레도<br>라 튤립</h5>
+                             <!--노트-->
+                             <b>top:</b>프리지아, 루바브<br>
+                             <b>middle:</b>튤립<br>
+                             <b>base:</b>베티버, 블론드우드   
+                        </div>
+                    </div>
+                    <!--구매페이지로 이동, 쿠팡이랑 연결-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="https://www.coupang.com/np/search?q=byredo%20tulip&src=1139000&spec=10799999&addtag=200&ctag=byredo%20tulip&lptag=AF1543738&itime=20230618033219&pageType=SEARCH&pageValue=byredo%20tulip&wPcid=16791076698249890012675&wRef=easykook.tistory.com&wTime=20230618033219&redirect=landing&traceid=V0-181-07613f683ff3b65c&mcid=678e68b824064db2a64d56a34102a431&placementid=&campaignid=&contentcategory=&imgsize=&tsource=&pageid=&deviceid=&token=&contenttype=&subid=&campaigntype=&requestid=&contentkeyword=&subparam=">
+                            자세히 알아보기</a></div>
+                    </div>
+                        </div>
+                    </div>
+                 <!--10번째-->
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <!--이미지-->
+                            <img class="card-img-top" src="./image/shop_7.png" alt="향수" />
+                            <div class="card-body p-4">
+                        <div class="text-center">
+                            <!--향수이름-->
+                            <h5 class="fw-bolder">샤넬<br>넘버5</h5>
+                             <!--노트-->
+                             <b>top:</b>레몬,일랑,베르가못<br>
+                             <b>middle:</b>자스민,로즈<br>
+                             <b>base:</b>머스크,모스,앰버
+                        </div>
+                            </div>
+                            <!--구매페이지로 이동, 쿠팡이랑 연결-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="https://www.coupang.com/np/search?q=no.5%20chanel&src=1139000&spec=10799999&addtag=200&ctag=no.5%20chanel&lptag=AF1543738&itime=20230618033327&pageType=SEARCH&pageValue=no.5%20chanel&wPcid=16791076698249890012675&wRef=easykook.tistory.com&wTime=20230618033327&redirect=landing&traceid=V0-181-8151886343baf8c6&mcid=5574cc40f468411993918edd163f30b3&placementid=&campaignid=&contentcategory=&imgsize=&tsource=&pageid=&deviceid=&token=&contenttype=&subid=&campaigntype=&requestid=&contentkeyword=&subparam=">
+                            자세히 알아보기</a></div>
+                            </div>
+                        </div>
+                    </div>
+                 <!--11번째-->
+                    <div class="col mb-5">
+                <div class="card h-100">
+                    <!--이미지-->
+                    <img class="card-img-top" src="./image/shop_8.png" alt="향수" />
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!--향수이름-->
+                            <h5 class="fw-bolder">샤넬<br>코코 마드모아젤</h5>
+                             <!--노트-->
+                             <b>top:</b>오렌지,베르가못<br>
+                             <b>middle:</b>모닝로즈,쟈스민<br>
+                             <b>base:</b>패츄리,머스크,베티버
+                        </div>
+                    </div>
+                    <!--구매페이지로 이동, 쿠팡이랑 연결-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="https://www.coupang.com/np/search?q=coco%20chanel&src=1139000&spec=10799999&addtag=200&ctag=coco%20chanel&lptag=AF1543738&itime=20230618033523&pageType=SEARCH&pageValue=coco%20chanel&wPcid=16791076698249890012675&wRef=easykook.tistory.com&wTime=20230618033523&redirect=landing&traceid=V0-181-633a96c48822adf3&mcid=468dbd5e185b464d8e99866c1ac6edff&placementid=&campaignid=&contentcategory=&imgsize=&tsource=&pageid=&deviceid=&token=&contenttype=&subid=&campaigntype=&requestid=&contentkeyword=&subparam=">
+                            자세히 알아보기</a></div>
+                    </div>
+                </div>
+                    </div>              
+                <!--12번째-->
+                    <div class="col mb-5">
+                <div class="card h-100">
+                    <!--이미지-->
+                    <img class="card-img-top" src="./image/shop_9.png" alt="향수" />
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!--향수이름-->
+                            <h5 class="fw-bolder">딥디크<br>도 손</h5>
+                             <!--노트-->
+                             <b>top:</b>로즈, 아이리스<br>
+                             <b>middle:</b>튜베로즈, 핑크페퍼<br>
+                             <b>base:</b>벤조인,머스크
+                        </div>
+                    </div>
+                    <!--구매페이지로 이동, 쿠팡이랑 연결-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="https://www.coupang.com/np/search?q=doson%20diptyque&src=1139000&spec=10799999&addtag=200&ctag=doson%20diptyque&lptag=AF1543738&itime=20230618033630&pageType=SEARCH&pageValue=doson%20diptyque&wPcid=16791076698249890012675&wRef=easykook.tistory.com&wTime=20230618033630&redirect=landing&traceid=V0-181-ca53f62df429ebc2&mcid=e6dc765b4a194fa7aee893cf521903f4&placementid=&campaignid=&contentcategory=&imgsize=&tsource=&pageid=&deviceid=&token=&contenttype=&subid=&campaigntype=&requestid=&contentkeyword=&subparam=">
+                            자세히 알아보기</a></div>
+                    </div>
+                </div>
+                    </div>
+                <!--13번째-->
+                    <div class="col mb-5">
+                <div class="card h-100">
+                    <!--이미지-->
+                    <img class="card-img-top" src="./image/shop_10.png" alt="향수" />
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!--향수이름-->
+                            <h5 class="fw-bolder">딥디크<br>롬브르 단 로</h5>
+                        </div>
+                    </div>
+                    <!--구매페이지로 이동, 쿠팡이랑 연결-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="https://www.coupang.com/np/search?q=dans%20diptyque&src=1139000&spec=10799999&addtag=200&ctag=dans%20diptyque&lptag=AF1543738&itime=20230618033742&pageType=SEARCH&pageValue=dans%20diptyque&wPcid=16791076698249890012675&wRef=easykook.tistory.com&wTime=20230618033742&redirect=landing&traceid=V0-181-771280ca614f5b87&mcid=270dc575193c45a793b1c19551009ad1&placementid=&campaignid=&contentcategory=&imgsize=&tsource=&pageid=&deviceid=&token=&contenttype=&subid=&campaigntype=&requestid=&contentkeyword=&subparam=">
+                            자세히 알아보기</a></div>
+                    </div>
+                </div>
+                    </div>
+                <!--14번째-->
+                    <div class="col mb-5">
+                <div class="card h-100">
+                    <!--이미지-->
+                    <img class="card-img-top" src="./image/shop_14.png" alt="향수" />
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!--향수이름-->
+                            <h5 class="fw-bolder">베르사체<br>브라이트 크리스탈</h5>
+                        </div>
+                    </div>
+                    <!--구매페이지로 이동, 쿠팡이랑 연결-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="https://www.coupang.com/vp/products/1221387154?itemId=2212316919&vendorItemId=3009169935&q=women%27s+perfume&itemsCount=36&searchId=db9a1ec72c34433b8ffcccf5f8db71c4&rank=23&isAddedCart=">
+                            자세히 알아보기</a></div>
+                    </div>
+                </div>
+                    </div>
+                <!--15번째-->
+                    <div class="col mb-5">
+                <div class="card h-100">
+                    <!--이미지-->
+                    <img class="card-img-top" src="./image/shop_15.png" alt="향수" />
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!--향수이름-->
+                            <h5 class="fw-bolder">아리아나그란데<br>땡큐 넥스트</h5>
+                        </div>
+                    </div>
+                    <!--구매페이지로 이동, 쿠팡이랑 연결-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="https://www.coupang.com/vp/products/1318344103?itemId=2338251392&vendorItemId=70334867336&q=women%27s+perfume&itemsCount=36&searchId=db9a1ec72c34433b8ffcccf5f8db71c4&rank=33&isAddedCart=">
+                            자세히 알아보기</a></div>
+                    </div>
+                </div>
+                    </div>
+                <!--16번째-->
+                    <div class="col mb-5">
+                <div class="card h-100">
+                    <!--이미지-->
+                    <img class="card-img-top" src="./image/shop_16.png" alt="향수" />
+                    <div class="card-body p-4">
+                        <div class="text-center">
+                            <!--향수이름-->
+                            <h5 class="fw-bolder">산타마리아노벨라<br>프리지아 오드코롱</h5>
+                        </div>
+                    </div>
+                    <!--구매페이지로 이동, 쿠팡이랑 연결-->
+                    <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                        <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="https://www.coupang.com/vp/products/6480971260?itemId=14187699520&vendorItemId=83497619742&q=%EC%82%B0%ED%83%80%EB%A7%88%EB%A6%AC%EC%95%84%EB%85%B8%EB%B2%A8%EB%9D%BC+%ED%94%84%EB%A6%AC%EC%A7%80%EC%95%84&itemsCount=36&searchId=ff74bdd2d08844f69bb012a7895078d0&rank=1&isAddedCart=">
+                            자세히 알아보기</a></div>
+                    </div>
+                </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!--Scripts-->    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>

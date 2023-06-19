@@ -1,0 +1,779 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RECOMMENDATION</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--GoogleFont-->
+      <!--GothicA1-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200;300&display=swap" rel="stylesheet">
+        <!--Parisienne-->    
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200;300&family=Parisienne&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+      <!--Prata-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+    
+    <style>
+        /*nav 스타일*/
+        .navigation{
+            position: fixed;
+            background-color:#99A799;
+            width: 100%;
+            padding:10px;
+            z-index: 1;
+        }
+        .nav-item, .navbar-brand{
+            margin-left: 10px;
+        }
+        /*nav 스타일 끝*/
+
+        /*body스타일*/
+        body{
+            background-color:#FEF5ED;
+        }
+        h2{
+          font-family: 'Prata', serif;
+          text-align: center;
+        }
+        h5,h4,h6{
+          font-family: 'Gothic A1', sans-serif;
+          text-align: center;
+        }
+        /*내용 */
+        #content{
+          padding-top: 100px;
+        }
+        #first_content{
+          font-family: 'Gothic A1', sans-serif;
+          text-align: center;
+          align-items:center;
+          margin:30px;
+   
+        }
+        #second_content{
+          font-family: 'Gothic A1', sans-serif;
+          text-align: center;
+          align-items:center;
+          margin:30px;
+          margin-bottom:150px;
+        }
+        .btn{
+          margin-right: 40px;
+          margin-bottom: 40px;
+          padding:10px;
+          border: 3px solid #ADC2A9;
+          width: 200px;
+          height:100px;
+        }
+        .btn:hover{
+          background-color:#ADC2A9 ;
+          color:white;
+        }
+        #second_accordion{
+          margin-top:200px;
+          margin-bottom:200px;
+
+        }
+        #spring, #summer,#fall,#winter{
+          width:1500px;
+          height:1000px;
+          margin-left:200px;
+          margin-bottom: 50px;
+        }
+        .accordion_item{
+          z-index: 0;
+        }
+
+    </style>
+  </head>
+  <body>
+   <!--Nav-->
+        <div class="navigation">
+          <nav class="navbar navbar-expand-lg navbar-light">
+              <div class="container-fluid">
+                  <a class="navbar-brand" href="./index.html">HOME</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="./info.html">INFO</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="./shop.html">SHOP</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="./history.html">HISTORY</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="./recommed.html">RECOMMENDATION</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="./contact.html">CONTACT&MY</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+          </nav>
+        </div>
+  <!--Nav끝-->
+  <!--Content버튼-->
+        <div id="content">
+            <h2>Fragrantize Recommendation</h2><br><br>
+            <h5> 분위기별, 계절별 어울리는 향수를 추천</h5><br>
+            <div id="first_content">
+                 <a href="#spring"><button class="btn">#봄_ 따뜻하고 포근한</button></a>
+                 <a href="#summer"><button class="btn">#여름_청량하고 시원한</button></a>
+                 <a href="#fall"><button class="btn">#가을_우디하고 분위기 있는</button></a>
+                 <a href="#winter"><button class="btn">#겨울_매혹적이거나 머스크한</button></a>
+            </div>
+            <br><br><br><br>
+            <h5 style>mbti별 향수 추천</h5><br>
+            <div id="second_content">
+              <a href="#first_accordion"><button class="btn">#ENFP #ENFJ</button></a>
+              <a href="#first_accordion"><button class="btn">#ESTJ #ISTJ</button></a>
+              <a href="#first_accordion"> <button class="btn">#INFJ #INTP</button></a>
+              <a href="#first_accordion"><button class="btn">#ESFP #ENTP</button></a>
+           </div>
+           <div id="second_content">
+            <a href="#second_accordion"><button class="btn">#ISTP #INTJ</button></a>
+            <a href="#second_accordion"><button class="btn">#ISFJ #ISFP</button></a>
+            <a href="#second_accordion"> <button class="btn">#ESFJ #INFP</button></a>
+            <a href="#second_accordion"><button class="btn">#ESTP #ENTJ</button></a>
+         </div>
+        </div>
+  
+  <!--계절 기반 추천 카드-->
+  <!--봄-->
+        <div id="spring">
+           <h4>#봄_ 따뜻하고 포근한</h4><br><br>
+            <div class="row row-cols-1 row-cols-md-4 g-4">
+                  <div class="col">
+                    <div class="card">
+                      <img src="./image/recommend/spring_1.jpg" class="card-img-top" alt="spring1">
+                      <div class="card-body">
+                        <h5 class="card-title">Kenzo <br>플라워바이겐조 포피 부케 <br>오 드 뚜왈렛 </h5>
+                        <p class="card-text"> 만다린, 삼박 재스민, 다마스크 로즈 등, 다채로운 조합으로 <br>프랑스 꽃시장의 생생한 향기를 전합니다. 
+                          <br><i>100ml, 13만6천원</i></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <img src="./image/recommend/spring_2.jpg" class="card-img-top" alt="spring2">
+                      <div class="card-body">
+                        <h5 class="card-title"> Jo Malone London <br>실크 블로썸 코롱</h5>
+                        <p class="card-text">경쾌한 실크 블로섬 향이 살구 향을 감싸며 눈앞으로 펼쳐진 이탈리아의 여름. <br>화이트 페퍼와 파촐리의 청량함이 로맨틱한 무드를 남깁니다. 
+                          <br><i>100ml, 20만4천원</i></p>
+                      </div>
+                    </div>
+                  </div>
+                <div class="col">
+                  <div class="card">
+                    <img src="./image/recommend/spring_3.jpg" class="card-img-top" alt="spring3">
+                    <div class="card-body">
+                      <h5 class="card-title">Gucci Beauty <br>길티 오 드 퍼퓸 인텐스 뿌르 팜므</h5>
+                      <p class="card-text">일랑일랑과 바이올렛의 달콤함이 관능적인 자두 향을 만나 전하는 자유로운 사랑
+                        <br>마무리로 짙은 우디 아로마와 바닐라 향이 연인 사이의 열정을 완성합니다. <br><i>90ml, 22만1천원</i></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card">
+                    <img src="./image/recommend/spring_4.jpg" class="card-img-top" alt="spring4">
+                    <div class="card-body">
+                      <h5 class="card-title"> Diptqyue 도 손 오 드 뚜왈렛</h5>
+                        <p class="card-text">수선화와 재스민의 플로럴 노트 사이
+                           숨겨진 히든 노트인 마린 어코드를 찾는 재미가 있다고 합니다. <br>
+                            사진가 팀 워커와 협업해 청록색 바다에 밴 수선화의 향을 표현한 패키지가 특징. 
+                          <br><i>100ml, 19만9천원</i>
+                        </p>
+                    </div>
+                  </div>
+                </div>
+        </div>
+        </div><br>
+  <!--여름-->
+        <div id="summer">
+          <h4 style="text-align: center;">#여름_청량하고 시원한</h4><br><br>
+          <div class="row row-cols-1 row-cols-md-4 g-4">
+                  <div class="col">
+                    <div class="card">
+                      <img src="./image/recommend/summer_1.jpg" class="card-img-top" alt="summer1">
+                      <div class="card-body">
+                        <h5 class="card-title"> Calvin Klein<br> 씨케이 원 썸머 데이즈</h5>
+                        <p class="card-text">당장 여름 여행을 떠나고 싶게 하는 생생한 금귤 향과 시원한 아이스 민트 티의 만남 
+                            <br>로드 트립 중 만난 붉은 석양을 닮은 선명한 오렌지색 보틀이 매력적인 향수
+                            <br> <i>100ml, 8만5천원</i> </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <img src="./image/recommend/summer_2.jpg" class="card-img-top" alt="summer2">
+                      <div class="card-body">
+                        <h5 class="card-title"> Byredo <br>미스터 마블러스 오 드 퍼퓸</h5>
+                        <p class="card-text"> 시트러스와 대나무의 상쾌함이 만나 완성한 싱그러운 여름. 
+                          <br>앰버와 시더우드가 더해져 깊은 여운을 남기며, 자신감 넘치는 현대인을 표현합니다. 
+                          <br><i>100ml, 34만원</i></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <img src="./image/recommend/summer_3.jpg" class="card-img-top" alt="summer3">
+                      <div class="card-body">
+                        <h5 class="card-title">  Narciso Rodriguez <br>나르시소 크리스탈 오 드 퍼퓸</h5>
+                        <p class="card-text">경쾌한 실크 블로섬 향이 살구 향을 감싸며 눈앞으로 펼쳐진 이탈리아의 여름. 
+                          <br>화이트 페퍼와 파촐리의 청량함이 맴돌면,<br> 헬리오트로프가 로맨틱한 무드를 남깁니다.
+                           <br><i>100ml, 20만4천원</i></p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col">
+                    <div class="card">
+                      <img src="./image/recommend/summer_4.jpg" class="card-img-top" alt="summer4">
+                      <div class="card-body">
+                        <h5 class="card-title"> Guerlain <br>아쿠아 알레고리아 네롤리아 베티베르</h5>
+                        <p class="card-text">햇살을 머금은 지중해를 표현한 칼라브리안 네롤리와 무화과의 조합이 생기가 넘칩니다. <br>
+                           신선한 바질 향이 베티베르와 대조를 이루며 풍성한 노트를 선사합니다. 
+                          <br><i>125ml, 21만7천원</i></p>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+        </div><br>  
+  <!--가을-->
+        <div id="fall">
+          <h4>#가을_우디하고 분위기 있는</h4><br><br>
+          <div class="row row-cols-1 row-cols-md-4 g-4">
+              <div class="col">
+                <div class="card">
+                  <img src="./image/recommend/fall_1.jpg" class="card-img-top" alt="fall1">
+                  <div class="card-body">
+                    <h5 class="card-title"> Penhaligon’s <br>루나 헤어퍼퓸</h5>
+                    <p class="card-text"> 달빛 아래 팅커벨이 공기의 흐름을 따라 살랑살랑 춤추는 모습이 연상되는 여리여리한 향으로, 
+                      아르간 오일과 비타민 E가 손상된 모발을 복구해줍니다. <br><i>30ml, 7만5천원</i> </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img src="./image/recommend/fall_2.jpg" class="card-img-top" alt="fall2">
+                  <div class="card-body">
+                    <h5 class="card-title">Jo Malone London <br>잉글리쉬 페어 앤 프리지아 </h5>
+                    <p class="card-text">가을에 유독 사랑받는 이 향수가 세로 홈이 새겨진 로맨틱한 디자인을 선보였습니다.
+                      <br>과수원에서 막 채집한 듯 신선한 배와 순수한 프리지어 꽃 향.<br> <i>100ml, 21만1천원</i> </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img src="./image/recommend/fall_3.jpg" class="card-img-top" alt="fall3">
+                  <div class="card-body">
+                    <h5 class="card-title">Givenchy Beauty <br>랑떼르디 오 드 뚜왈렛</h5>
+                    <p class="card-text">관능의 대명사인 랑떼르디 라인에 추가된 신제품. 
+                      <br>풍성한 플로럴 부케 향에 스모키한 머스키 레더가 더해져 깊고 중독적입니다. <br><i>50ml, 12만원대</i> </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card">
+                  <img src="./image/recommend/fall_4.jpg" class="card-img-top" alt="fall4">
+                  <div class="card-body">
+                    <h5 class="card-title"> Caudalie <br>테 드 비뉴 프레쉬 프래그런스</h5>
+                    <p class="card-text">거북하지 않게 살며시 다가오는 우아한 향수를 찾는다면 제격이라고 생각합니다. <br>
+                       재스민과 머스크로 저물녘의 포도밭을 표현한 보랏빛 향기. <br> <i>50ml, 4만5천원.</i> </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+  <!--겨울-->
+        <div id="winter">
+           <h4>#겨울_매혹적이거나 머스크한</h4><br><br>
+            <div class="row row-cols-1 row-cols-md-4 g-4">
+                  <div class="col">
+                    <div class="card">
+                      <img src="./image/recommend/winter_1.jpg" class="card-img-top" alt="winter1">
+                            <div class="card-body">
+                        <h5 class="card-title">Astier de Villatte <br>르 디유 블루</h5>
+                        <p class="card-text"> 고대 이집트에서 신과 인간을 연결해준 향료 ‘키피’를 모티브로 했습니다. 
+                          <br>허니 우드, 스카치 브룸, 오포파낙스가 조화를 이루는 신비로운 향. <br><i>100ml, 48만원,</i> </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <img src="./image/recommend/winter_2.jpg" class="card-img-top" alt="winter2">      
+                      <div class="card-body">
+                        <h5 class="card-title"> Le Labo <br>핸드 포마드(히노키)</h5>
+                        <p class="card-text">기존 제품의 두 배 가까운 용량으로 알루미늄 튜브에 담아 출시했다.
+                           <br>  편백나무 숲에서 깊은 숨을 들이마신 듯 평온한 향. <br> <i>100ml, 4만9천원대</i></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <img src="./image/recommend/winter_3.jpg" class="card-img-top" alt="winter3">
+                      <div class="card-body">
+                        <h5 class="card-title"> YSL Beauty <br>리브르 르 퍼퓸</h5>
+                        <p class="card-text">시그너처 향조인 오렌지 블로섬과 <br> 라벤더에 톡 쏘는 진저와 사프란을 가미해 <br>향이 더욱 깊고 강렬해졌다. 
+                          <br><br><i>50ml, 19만7천원대.</i></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card">
+                      <img src="./image/recommend/winter_4.jpg" class="card-img-top" alt="winter4">
+                      <div class="card-body">
+                        <h5 class="card-title">  Tom Ford Beauty<br> 쏠레이 네쥐 쉬머링 바디 오일</h5>
+                        <p class="card-text">눈 덮인 알프스에 반사된 은빛 햇살처럼 피부에 은은한 광채를 부여한다. 
+                          <br>가볍게 스며들며, 그 향은 달달하고 우아하다. <br><i>45ml, 6만7천원대</i>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+        </div>
+  <!--계절 카드 끝-->
+
+  <!--MBTI-->
+
+
+  <h4>MBTI별 향수 추천 해드릴게요 </h4><br><br>
+  <!--첫번째 아코디언 -->
+    <div id="first_accordion">
+          <div class="accordion" id="accordionPanelsStayOpenExample">
+    <!--첫번째 MBTI-->
+            <div class="accordion-item"> 
+                  <h2 class="accordion-header" id="panelsStayOpen-headingone">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" 
+                          aria-expanded="false" aria-controls="panelsStayOpen-collapseOne">
+                          #ENFP #ENFJ 
+                      </button>
+                  </h2>
+                  <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingOne">
+                    <div class="accordion-body">
+                         <h5>바라보고만 있어도 느낄 수 있는 강한 에너지. 먼저 나서는 것을 마다하지 않고 언제나 새로운 것을 환영하는 이들에게, 시트러스와 프루티 계열의 경쾌한 매력은 잘 어울릴 수밖에 없을 거에요.</h5>
+                    </div><br><br>
+                  <img style="float:left;  width: 50%;"  src="./image/recommend/recommend_5.jpg" alt="mbti1">
+    <!--카드로 향수 설명-->
+                <div style="width: 50%;  float: right;  display:block;" class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">1. Marc Jacobs</h4><br>
+                        <h6 class="card-subtitle mb-2 text-muted"> 데이지 마크 제이콥스 오 쏘 프레시 <br> 75ml 9만3천원</h6>
+                        <h6 class="card-text">자몽과 구스베리에 깔끔한 허브 향이 블렌딩되어 청명한 봄 하늘이 펼쳐지는 듯합니다.</h6>
+                    </div>
+                </div>
+                <div style="width: 50%;  float: right;  display:block;" class="card">
+                  <div class="card-body">
+                        <h4 class="card-title">2. Jo Malone London</h4>
+                        <h6 class="card-subtitle mb-2 text-muted"> 비터 만다린 코롱, 75ml, 100ml<br> 20만4천원.  </h6>
+                        <h6 class="card-text">기찬 만다린에 앰버를 더해 더욱 강해진 향. <br>평화로운 지중해의 오후, 오렌지 음료를 한 잔 들이켜는 모습을 담았습니다.</h6>     
+                  </div>
+                </div>
+                <div style="width: 50%;  float: right;  display:block;" class="card">
+                  <div class="card-body">
+                        <h4 class="card-title"> 3. Byredo </h4>
+                        <h6 class="card-subtitle mb-2 text-muted"> 오픈 스카이 오 드 퍼퓸<br> 100ml, 34만원.  </h6>
+                        <h6 class="card-text"> 강렬한 자몽 향에 블랙 페퍼와 우디 향이 섞여 독특한 향을 완성하는 듯합니다.</h6>
+                     
+                    </div>
+                </div>
+                <div style="width: 50%;  float: right;  display:block;" class="card">
+                  <div class="card-body">
+                      <h4 class="card-title"> 4. Fresh </h4>
+                      <h6 class="card-subtitle mb-2 text-muted"> 헤스페리데스 오 드 퍼퓸,<br> 100ml 16만5천원대.</h6>
+                      <h6 class="card-text">레몬, 만다린 등 다채로운 시트러스 과일을 그대로 짜낸 듯 
+                        상큼하고 청량한 향의 향수..</h6>
+                    <a href="#second_content" class="card-link">위로</a>
+                 </div>
+  <!--카드 설명-->
+                </div>
+              </div>
+            </div>
+            </div>  
+    <!--두번째 MBTI-->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                   data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                    #ESTJ #ISTJ
+                  </button>
+                </h2>
+                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                  <div class="accordion-body">
+                    <h5>단정한 모범생에게는 깔끔하고 편안한 그린 우디 계열이 제격입니다. <br>
+                     수목의 싱그 러운 정취와 따뜻한 우드 향이 계획을 지키느라 긴장했던 마음을 다독여줄 것. </h5>
+                  </div>
+                  <br><br>
+                  <img style="float:left;  width: 50%;"  src="./image/recommend/recommend_6.jpg" alt="mbti1">
+      <!--카드로 향수 설명-->
+                  <div style="width: 50%;  float: right;  display:block;" class="card">
+                    <div class="card-body">
+                      <h4 class="card-title"> 1. Jo Loves</h4>
+                      <h6 class="card-subtitle mb-2 text-muted"> 골든 가드니아 오 드 뚜왈렛, 100ml 23만원</h6>
+                      <h6 class="card-text">스웨이드 카르다몸에 약간의 스파이시함을 더해 질리지 않는 향입니다,</h6>
+                    
+                    </div>
+                  </div>
+                  <div style="width: 50%;  float: right;  display:block;" class="card">
+                    <div class="card-body">
+                      <h4 class="card-title">2. Tom Ford Beauty</h4>
+                      <h6 class="card-subtitle mb-2 text-muted">  에벤 퓨메 오 드 퍼퓸 ,50ml, 33만 9천원. </h6>
+                      <h6  class="card-text">스모키한 팔로 산토 향 위로, 마른 나무에 맺힌 송진 향과 에보니 
+                        우드 향이 따뜻함을 자아냅니다.</h6>
+               
+                    </div>
+                  </div>
+                  <div style="width: 50%;  float: right;  display:block;" class="card">
+                    <div class="card-body">
+                      <h4 class="card-title"> 3. Dolce & Gabbana </h4>
+                      <h6 class="card-subtitle mb-2 text-muted"> 라이트 블루 이탈리안 러브 뿌르 옴므, 100ml 10만1천원</h6>
+                      <h6  class="card-text">티베르와 파촐리가 제비꽃 잎사귀의 그린 노트를 만나 
+                        카프리의 깊은 숲속에 온 듯한 느낌</h6>
+             
+                    </div>
+                  </div>
+                  <div style="width: 50%;  float: right;  display:block;" class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">4. Lanvin</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">  레 플레르 드 랑방 블루 오키드, 90ml 8만 2천원</h6>
+                        <h6  class="card-text">싱그러운 사과와 레몬 향이 블루 오키드 노트를 감싼 시트러스 우디 계열</p>
+                        <a href="#second_content" class="card-link">위로</h6></a>
+                    </div>
+                </div>
+              </div>
+              </div>
+            <!--세번째 MBTI-->
+       <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+          <button class="accordion-button collapsed" type="button"
+           data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+          #INFJ #INTP
+          </button>
+        </h2>
+        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+          <div class="accordion-body">
+            <h5>우울한 순간, 기분을 달래주는 달콤한 초콜릿 한 조각.
+            <br> 캐러멜이나 초콜릿, 바닐라 노트 등의 구르망 향은 사색을 즐기는 감수성 짙은 이에게 진득한 달콤함을 전합니다</h5>
+          </div>
+        
+        
+          <br><br>
+          <img style="float:left;  width: 50%;"  src="./image/recommend/recommend_7.jpg" alt="mbti3">
+      <!--카드로 향수 설명-->
+        <div style="width: 50%;  float: right;  display:block;" class="card">
+          <div class="card-body">
+            <h4 class="card-title">1. Valentino Beauty</h4>
+            <h6 class="card-subtitle mb-2 text-muted"> 보체 비바 오 드 퍼퓸, 100ml 22만 5천원</h6>
+            <h6  class="card-text">바닐라와 따뜻한 플로럴 부케, 베르가모트의 레이어링을 통해<br>
+               소신 있는 여성의 목소리를 표현해보았습니다.</h6> 
+            
+          </div>
+        </div>
+        <div style="width: 50%;  float: right;  display:block;" class="card">
+          <div class="card-body">
+            <h4 class="card-title">2. Ormaie</h4>
+            <h6 class="card-subtitle mb-2 text-muted">  르 파상, 100ml, 30만5천원. </h6>
+            <h6  class="card-text">그윽한 바닐라, 통카빈, 아미리스 향과 라벤더의 조화로 
+              아버지에 대한 그리움을 담았습니다. </h6>  
+            
+          </div>
+        </div>
+        <div style="width: 50%;  float: right;  display:block;" class="card">
+          <div class="card-body">
+            <h4 class="card-title"> 3. Lolita Lempicka  </h4>
+            <h6 class="card-subtitle mb-2 text-muted"> 르 퍼퓸 오 드 퍼퓸, 100ml, 18만7천원. </h6>
+            <h6 class="card-text">큼한 아마레나 체리와 통카빈의 하모니로 구현한 달달한 향 입니다.</h6>
+          
+          </div>
+        </div>
+        <div style="width: 50%;  float: right;  display:block;" class="card">
+          <div class="card-body">
+            <h4 class="card-title"> 4. Memo Paris</h4>
+            <h6 class="card-subtitle mb-2 text-muted">  플롬 오 드 퍼퓸, 75ml, 35만원. </h6>
+            <h6 class="card-text">베이스 노트의 통카빈과 바닐라 팟이 포근하고 행복한 기분을 자아</h6>
+            <a href="#second_content" class="card-link">위로</a>
+          </div>
+       </div>
+        </div>
+       </div>
+      </div>
+    <!--네번째 MBTI-->
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                #ESFP #ENTP
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
+              <div class="accordion-body">
+                <h5>같이 있으면 지루할 일이 없는 이들에게, 폭죽처럼 터지는 풍부한 플로럴 향만큼 잘 어울리는 것은 없습니다.  <br>
+                고상한 장미 향보다는 데이지, 오렌지 플라워 등 화이트 플로럴 계열 의 발랄한 분위기가 찰떡이라고 할 수 있습니다.</h5>
+              </div>
+              <br><br>
+              <img style="float:left;  width: 50%;" src="./image/recommend/recommend_8.jpg" alt="mbti4">
+  <!--카드로 향수 설명-->
+              <div style="width: 50%;  float: right;  display:block;" class="card">
+                <div class="card-body">
+                  <h4 class="card-title"> 1. Hermes </h4><br>
+                  <h6 class="card-subtitle mb-2 text-muted">  운 자르뎅 수르 라 라군 오 드 뚜왈렛, <br>100ml 16만원</h6>
+                  <h6 class="card-text">백합과 목련 향이 베니스의 비밀 정원을 연상하며
+                     신비롭고 몽상적인 향이 특징이라고 할 수 있습니다.</h6>
+                  
+                </div>
+              </div>
+              <div style="width: 50%;  float: right;  display:block;" class="card">
+                <div class="card-body">
+                  <h4 class="card-title">2. Dior </h4><br>
+                  <h6 class="card-subtitle mb-2 text-muted">  라 콜렉시옹 프리베 쟈스망 데 쟝주 오 드 퍼퓸 <br>125ml, 32만5천원.  </h6>
+                  <h6 class="card-text">살을 가득 머금은 풍성한 재스민 노트 위로 달콤한 살구 노트가 피어납니다.</h6>
+                
+                </div>
+              </div>
+              <div style="width: 50%;  float: right;  display:block;" class="card">
+                <div class="card-body">
+                  <h4 class="card-title"> 3. Atelier Cologne</h4><br>
+                  <h6 class="card-subtitle mb-2 text-muted">  보헤미안 오렌지 블로썸,200ml <br>29만1천원.  </h6>
+                
+                </div>
+              </div>
+              <div style="width: 50%;  float: right;  display:block;" class="card">
+                <div class="card-body">
+                  <h4 class="card-title">4. YSL Beauty </h4><br>
+                  <h6 class="card-subtitle mb-2 text-muted"> 리브르 오 드 뚜왈렛 <br>90ml, 19만원. </h6>
+                  <p class="card-text">라벤더 향으로 밝고 상쾌하게 시작해 오렌지 블로섬과 화이트티의 순수함이 어우러집니다.</p>
+                  <a href="#second_content" class="card-link">위로</a>
+                </div>
+            </div>
+          </div>
+         </div>
+          </div>
+      </div>
+        
+      <!--두번째 질문 아코디언-->
+          <div id="second_accordion">
+                <div  class="accordion" id="accordionPanelsStayOpenExample">
+                            
+    <!--5번째mbti-->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+                  #ISTP #INTJ
+                </button>
+              </h2>
+              <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFive">
+                <div class="accordion-body">
+                    <h5>호기심 넘치는 INTJ라면 낯선 오리엔탈 향에 관심을 가져보세요 <br>
+                    이국적인 향신료 를 사용한 독특한 향도 소화할 수 있는 성향입니다. <br>
+                     달달하지만 관능적인 매력을 갖추고 있다는 점에서 다재다능한 ISTP와도 좋은 궁합이며, 오리엔탈 계열을 처음 접해본다면 부드러운 앰버, 샌들우드를 추가한 소프트 오리엔탈에 주목해보세요.</h5> <br>
+                    <br><br>
+                    <img style="float:left;  width: 50%;"  src="./image/recommend/recommend_1.jpg" alt="mbti1">
+    <!--카드로 향수 설명-->
+                  <div style="width: 50%;  float: right;  display:block;" class="card">
+                    <div class="card-body">
+                        <h4 class="card-title"> 1. Astier de Villatte</h4>
+                        <h6 class="card-subtitle mb-2 text-muted"> 투손 퍼퓸<br>100ml 26만원</h6>
+                        <h6 class="card-text">은은한 야생 타임과 록로즈의 송진에서 나오는 
+                          달콤한 앰버 향을 맡으면 미국 서부 사막이 눈 앞으로 펼쳐집니다.</h6>
+                    </div>
+                  </div>
+                  <div style="width: 50%;  float: right;  display:block;" class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">2. Chloe</h4>
+                        <h6 class="card-subtitle mb-2 text-muted"> 노마드 오 드 퍼퓸 나츄렐<br>75ml, 14만5천원. </h6>
+                        <h6 class="card-text">이집트 재스민 앱솔루트 아래로 잔잔한 바닐라와 샌들우드의 잔향이 지나가며 부드러움이 겹겹이 쌓입니다.</h6>
+                    </div>
+                  </div>
+                  <div style="width: 50%;  float: right;  display:block;" class="card">
+                    <div class="card-body">
+                      <h4 class="card-title"> 3. Penhaligon’s </h4>
+                      <h6 class="card-subtitle mb-2 text-muted"> 아서 <br> 75ml, 37만원 </h6>
+                      <h6 class="card-text">용이 내뿜는 불길과 같은 인센스 향에 레진과 관능미를 자아낸 베이스 노트가 발사믹한 향을 증폭시킵니다.</h6>
+                    
+                    </div>
+                  </div>
+                  <div style="width: 50%;  float: right;  display:block;" class="card">
+                      <h4 class="card-title"> 4. Maison Francis Kurkdjian</h4>
+                      <h6 class="card-subtitle mb-2 text-muted"> 우드 엑스트레<br> 70ml, 48만6천원</h6>
+                      <h6 class="card-text">관능적인 우드에 이국적인 엘레미와 사프란이 더해져 아라비안나이트의 신비한 느낌을 선사합니다.</h6>
+                      <a href="#second_content" class="card-link">위로</a>
+                    </div>
+                  </div>
+                </div>
+      <!--카드 설명-->
+              </div>
+            </div>
+       <!--6번째mbti-->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="panelsStayOpen-headingSix">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSix" aria-expanded="false" aria-controls="panelsStayOpen-collapseSix">
+              #ISFJ #ISFP
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseSix" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingSix">
+            <div class="accordion-body">
+           <h5>ISFJ와 ISFP는 포근하고 우아한 머스크 향을 똑 닮았습니다. <br>
+               파우더리한 향조는 내향적 감정형의 넉넉한 마음씨를 강조해줄 비결. 다정한 천사 이미지의 ISFJ에게는 플로럴 어코드와 어우러진
+                화이트 머스크를, 대인배형 ISFP라면 달콤한 향이 가미된 블랙 머스크만의 짙고 고급스러운 매력을 입기를 추천해봅니다.</h5>
+            <br><br>
+            <img style="float:left;  width: 50%;"  src="./image/recommend/recommend_2.jpg" alt="mbti2">
+            <!--카드로 향수 설명-->
+                        <div style="width: 50%;  float: right;  display:block;" class="card">
+                          <div class="card-body">
+                            <h5 class="card-title">  1. Editions de Parfums Frederic Malle </h5>
+                            <h6 class="card-subtitle mb-2 text-muted">  이리스 뿌드르 <br> 100ml, 50만3천원</h6>
+                            <h6 class="card-text">래식한 분위기의 화이트 머스크 향. 아이리스와 일랑일랑으로 세련미를 더합니다.</h6>
+                          
+                          </div>
+                        </div>
+                        <div style="width: 50%;  float: right;  display:block;" class="card">
+                          <div class="card-body">
+                            <h5 class="card-title">2. Le Labo </h5>
+                            <h6 class="card-subtitle mb-2 text-muted"> 어나더13, <br>100ml 34만 5천원 </h6>
+                            <h6 class="card-text"> 진한 암브록산과 이끼가 블렌딩된 우디 머스크 계열 향수. 시간이 지날수록 살냄새에 가까워진다.</h6>
+                       
+                          </div>
+                        </div>
+                        <div style="width: 50%;  float: right;  display:block;" class="card">
+                          <div class="card-body">
+                            <h5 class="card-title"> 3. Nicolai  </h5>
+                            <h6 class="card-subtitle mb-2 text-muted"> 뿌드르 드 머스크 인텐스 오 드 퍼퓸 <br>100ml, 25만4천원.  </h6>
+                            <h6 class="card-text">장미와 오렌지꽃 향이 실크처럼 포근하게 감싸는 파우더리한 플로럴 머스크 향</h6>
+                  
+                          </div>
+                        </div>
+                        <div style="width: 50%;  float: right;  display:block;" class="card">
+                          <div class="card-body">
+                            <h5 class="card-title"> 4. Diptyque</h5>
+                            <h6 class="card-subtitle mb-2 text-muted"> 플레르 드 뽀 오 드 퍼퓸 <br>75ml, 23만5천원.</h6>
+                            <h6 class="card-text">본연의 체취 같은 은은한 머스크 향이 매력적. 히든 노트인 달콤한 핑크 페퍼콘이 황홀함을 더한다. </h6>
+                            <a href="#second_content" class="card-link">위로</a>
+                          </div>
+                        </div>
+                      </div>
+                      <!--카드 설명-->
+                </div>
+            </div>
+      <!--7번째mbti-->
+       <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingSeven">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseSeven" aria-expanded="false" aria-controls="panelsStayOpen-collapseSeven">
+              #ESFJ #INFP
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseSeven" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingSeven">
+            <div class="accordion-body">
+            <h5>여려 보이지만 그 안에 강직한 마음을 지닌 외유내강형. <br>
+                곤경에 처해도 방긋 웃을 줄 아는 INFP와 ESFJ는 맑은 아쿠아 계열의 매력을 잘 알 것입니다. <br>
+               “아쿠아 계열은 시트러스 노트와 만났을 때 그 시원함과 상쾌함이 배가됩니다. 산뜻한 느낌을 주는 플로럴 아쿠아는 마음을 편안하게 해주죠.” 김용진 조향사의 조언처럼<br>
+                방금 막 빨래를 마친 듯 깨끗한 코튼 향 또한 마음을 긍정적으로 바꿔줄 마법의 향수를 추천합니다.</h5>
+             </div>
+            <br><br>
+            <img style="float:left;  width: 50%;" src="./image/recommend/recommend_3.jpg" alt="mbti2">
+            <!--카드로 향수 설명-->
+                       <div style="width: 50%;  float: right;  display:block;" class="card">
+                          <div class="card-body">
+                            <h5 class="card-title"> 1. 100Bon  </h5>
+                            <h6 class="card-subtitle mb-2 text-muted">  뉘아주 드 코튼  <br>50ml, 7만8천원. </h6>
+                            <h6 class="card-text">방금 세탁을 마친 이불을 덮은 듯 개운하고 깨끗한 향. 가벼운 허브 머스크향이 더해집니다.</h6>
+                          
+                          </div>
+                        </div>
+                        <div style="width: 50%;  float: right;  display:block;" class="card">
+                          <div class="card-body">
+                            <h5 class="card-title">2. Kenzo </h5>
+                            <h6 class="card-subtitle mb-2 text-muted">  로 겐조 뿌르 옴므, <br>100ml 10만원대.  </h6>
+                            <h6 class="card-text"> 아쿠아틱 시트러스 향으로, 상쾌한 유주와 프로스티드 민트, 시더우드가 만나 투명한 물을 표현</h6>
+                           
+                          </div>
+                        </div>
+                        <div style="width: 50%;  float: right;  display:block;" class="card">
+                          <div class="card-body">
+                            <h5 class="card-title"> 3. Kilian  </h5>
+                            <h6 class="card-subtitle mb-2 text-muted">  굿 걸 곤 배드 바이 킬리안 오 프레쉬 <br>50ml, 28만 8천원.  </h6>
+                            <h6 class="card-text">순수한 화이트 플라워들의 향연에 지중해의 아쿠아틱한 향을 가미해 상쾌한 분위기</h6>
+                          
+                          </div>
+                        </div>
+                        <div style="width: 50%;  float: right;  display:block;" class="card">
+                          <div class="card-body">
+                            <h5 class="card-title">4. Loewe by Sephora </h5>
+                            <h6 class="card-subtitle mb-2 text-muted"> 아쿠아 마이애미 오드 뚜왈렛 <br>100ml 14만 5천원</h6>
+                            <h6 class="card-text">로에베의 헤스페리데스 오 드 뚜왈렛을 아쿠아틱하게 재해석해 산뜻하고 가벼운 향 </h6>
+                            <a href="#second_content" class="card-link">위로</a>
+                          </div>
+                        </div>
+                      </div>
+                      <!--카드 설명-->
+                </div>
+        <!--8번째-->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingEight">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseEight" aria-expanded="false" aria-controls="panelsStayOpen-collapseEight">
+              #ESTP #ENTJ
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseEight" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingEight">
+            <div class="accordion-body">
+            <h5>열정 가득한 야망가들이다. 스파이시한 향이나 멋스러운 럼 에센스, 레더 계열 향수로 열렬한 애정을 드러내보세요 <br>
+              “우드 혹은 오리엔탈 계열을 베이스로, 럼주나 가죽의 향이 은은하게 더해진 향을 추천합니다. 우드나 오리엔탈의 부드러움이 지나친 열정으로 과잉된 흥분을 안정시켜줄 거예요.”</h5>
+            </div>
+            <br><br>
+            <img style="float:left;  width: 50%;"  src="./image/recommend/recommend_4.jpg" alt="mbti4">
+            <!--카드로 향수 설명-->
+                      <div style="width: 50%;  float: right;  display:block;" class="card">
+                          <div class="card-body">
+                            <h5 class="card-title">  1. Le Couven  </h5>
+                            <h6 class="card-subtitle mb-2 text-muted">   퍼퓸 리마커블 포트 로얄, 100ml, 15만원.  </h6>
+                            <p class="card-text">벤조인 앱솔루트와 달콤한 와일드 베리가 만나 강렬하지만 부드러운 카리스마를 선사합니다.</p>
+                  
+                          </div>
+                        </div>
+                        <div style="width: 50%;  float: right;  display:block;" class="card">
+                          <div class="card-body">
+                            <h5 class="card-title">2. Acqua di Parma</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">  레더 오 드 퍼퓸,100ml, 28만원.   </h6>
+                            <p class="card-text"> 묵직한 가죽 향 너머로 흐르는 신선한 오렌지와 레몬 오일의 향이 경쾌합니다.</p>
+                  
+                          </div>
+                        </div>
+                        <div style="width: 50%;  float: right;  display:block;" class="card">
+                          <div class="card-body">
+                            <h5 class="card-title"> 3. Malin+Goetz  </h5>
+                            <h6 class="card-subtitle mb-2 text-muted"> 레더 오 드 퍼퓸 , 50ml 14만원.   </h6>
+                            <p class="card-text">익숙한 정향과 후추 향 사이로 빈티지 가죽 향이 가볍게 흐르는 노트라고 생각하시면 됩니다.</p>
+                           
+                          </div>
+                        </div>
+                        <div style="width: 50%;  float: right;  display:block;" class="card">
+                          <div class="card-body">
+                            <h5 class="card-title">4. BDK Parfums </h5>
+                            <h6 class="card-subtitle mb-2 text-muted"> 그리 샤르넬 오 드 퍼퓸 100ml, 26만9천원. </h6>
+                            <p class="card-text">리의 열정을 담은 스파이시한 카르다몸과 블랙티, 밀키한 통카빈이 조화를 이륩니다.</p>
+                            <a href="#second_content" class="card-link">위로</a>
+                          </div>
+                        </div>
+                      </div>
+                      <!--카드 설명-->
+          </div>
+        </div>
+    </div>
+  </div>
+  <!--Content 본문 끝-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+   
+  </body>
+</html>

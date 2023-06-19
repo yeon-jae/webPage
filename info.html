@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>INFO</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!--GoogleFont-->
+      <!--GothicA1-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200;300&display=swap" rel="stylesheet">
+      <!--Parisienne-->    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200;300&family=Parisienne&family=Playfair+Display:ital,wght@1,600&display=swap" rel="stylesheet">
+    <!--Prata-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prata&display=swap" rel="stylesheet">
+    <!--CSS STYLE-->
+    <style>
+    /*네비바*/
+        .navigation{
+            position: fixed;
+            background-color:#99A799;
+            width: 100%;
+            padding:10px;
+        }
+        .nav-item, .navbar-brand{
+            margin-left: 10px;
+        }
+        body, ul, li {
+            margin: 0;
+            padding: 0;
+            list-style: none;   	    
+        }
+        a {
+            color: inherit;   	 
+            text-decoration: none;    
+        }
+        .side-bar > ul ul {
+            display: none;
+        }
+        body {
+            height: 5000px;
+            background-color:#FEF5ED;
+        }
+        :root {
+            --side-bar-width: 270px;
+            --side-bar-height: 90vh;
+            --rotate-icon: 0.5s;
+        }
+        .side-bar {
+            position: fixed;   
+            background-color:#ADC2A9;
+            width: var(--side-bar-width);
+            min-height: var(--side-bar-height);   
+            margin-top: 75px;
+            border-radius: 20px;
+            transform: translate(calc(var(--side-bar-width) * -0.8), 0);  /* X축 이동, Y축 고정 */
+            transition: .5s;
+            font-family: 'Prata', serif;
+        }
+        .side-bar:hover {
+            transform: translate(-20px, 0);   
+        }
+
+        .side-bar ul > li > a {
+            display: block;
+            color: black;
+            font-size: 1.2rem;
+            font-weight: bold;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 50px;
+        }
+        .side-bar > ul > li {
+             position: relative;
+        }
+        .side-bar ul > li:hover > a {
+            background-color: #FEF5ED;
+            border-bottom: 1px solid black;
+        }
+
+        .side-bar > ul > li:hover > ul {
+            display: block;
+            position: absolute;
+            background-color:#ADC2A9;
+            top: 0;        
+            left: 100%;    
+            width: 100%;  
+        }
+        section {
+            position: relative;
+            width: 23px;
+            height: 17px;
+            margin-left: 230px;
+            margin-bottom: 10px;
+            margin-top: 20px;
+            transition: .5s;
+        }
+        section > div {
+            position: absolute;
+            width: 100%;
+            height: 20%;
+            background-color: black;
+            transition: all var(--rotate-icon);
+        }
+
+        section > div:nth-of-type(1) {
+            top: 0;
+            width: auto;
+            left: 0;
+            right: 0;
+            transition: all var(--rotate-icon), left calc(var(--rotate-icon) / 2) calc(var(--rotate-icon) / 2), right calc(var(--rotate-icon) / 2) calc(var(--rotate-icon) / 2), height calc(var(--rotate-icon) / 2) 0s;
+        }
+
+        section > div:nth-of-type(2) {
+            top: 40%;
+            transform-origin:bottom left;
+        }
+
+        section > div:nth-of-type(3) {
+            top: 80%;
+            left: auto;
+            right: 0;
+            transform-origin:bottom right;
+        } 
+
+        section:hover > div:nth-of-type(2) {
+            transform:rotate(45deg);
+            width: 70.5%;
+        }
+
+        section:hover > div:nth-of-type(3) {
+            top: 40%;
+            transform:rotate(-45deg);
+            width: 70.5%;
+        }
+
+        section:hover > div:nth-of-type(1) {
+            left: 40%;
+            right: 40%;
+            height: 100%;
+            transition: all var(--rotate-icon), left calc(var(--rotate-icon) / 2) 0s, right calc(var(--rotate-icon) / 2) 0s, height calc(var(--rotate-icon) / 2) calc(var(--rotate-icon) / 2);
+        }
+     
+    /*컨텐츠 위치*/
+        .content{
+            padding-top:100px;
+            margin-left: 400px;
+        }
+    </style>
+  </head>
+
+  <body>
+ 
+  <!--Nav-->
+          <div class="navigation">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="./index.html">HOME</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./info.html">INFO</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" href="./shop.html">SHOP</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" href="./history.html">HISTORY</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" href="./recommed.html">RECOMMENDATION</a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link active" href="./contact.html">CONTACT&MY</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+            </nav>
+          </div>
+
+  <!--사이드바-->
+          <aside class="side-bar">
+              <section>
+                <div></div>
+                <div></div>
+                <div></div>
+              </section>     
+  <!--사이드 메뉴-->
+            <ul>
+              <li>
+                <a href="#note0">NOTE_INFO</a>
+                    <ul>
+                        <li><a href="#note0">NOTE?</a></li>
+                        <li><a href="#note1">TOP_NOTE</a></li>
+                        <li><a href="#note2">MIDDLE_NOTE</a></li>
+                        <li><a href="#note3">BASE_NOTE</a></li>
+                    </ul>
+              </li>
+              <li>
+                <a href="#topNote1">TOP_NOTE</a>
+                    <ul>
+                        <li><a href="#topNote1">CITRUS</a></li>
+                        <li><a href="#topNote2">FRUITY</a></li>  
+                        <li><a href="#topNote3">GREEN</a></li>  
+                    </ul>
+              </li>
+              <li>
+                <a href="#middle1">MIDDLE_NOTE</a>
+                    <ul>
+                        <li><a href="#middle1">ROSE</a></li>
+                        <li><a href="#middle2">MUGUET</a></li>
+                        <li><a href="#middle3">SPICY</a></li>
+                        <li><a href="#middle4">CHYPRE</a></li>
+                    </ul>
+              </li>
+              <li>
+                <a href="#base1">BASE_NOTE</a>
+                    <ul>
+                        <li><a href="#base1">WOODY</a></li>
+                        <li><a href="#base2">MUSK</a></li>
+                        <li><a href="#base3">AMBER</a></li>
+                    </ul>
+              </li>
+            </ul>
+          </aside>
+  <!--본문 내용-->
+    <div class="content">
+       <div id="note0">
+            <h2>Note?</h2><br>
+            <p>
+                원래의 '노트'라는 용어는 음악에서 차용해 온 용어로, 음악에서 음을 표현하듯 향에서는 향이 갖고 있는 성격을 나타냅니다.<br>
+                개별적으로 보면 노트는 단순히 향 자체를 말하기도 하고, 향이 갖는 향의 성격을 나타내지만<br> 하나의 향수 안에서의 노트는 휘발 시간에 따라 탑, 미들, 베이스노트로 이름을 달리해
+                향이 변화하는 순간을 구분짓게 됩니다.
+            </p>
+            <hr><br><br><br>
+            <h3>왜 시간에 따라 노트가 구별될까?</h3>
+            <br>
+            <p>
+                곡을 작곡할때도 도입부, 중간부, 후반부 등으로 구별지어 곡에 지루함을 덜어내고 생동감을 연출해 내는 것처럼<br>
+                향수에도 향료들이 각각 가지고 있는 휘발도의 특성을 잘 이용해 향에 변화를 주어 향수에 생동감을 부여하고 향수의 지속력을 궁극적으로 높일 수 있습니다.
+                <br>
+                유기화학적인 측면에서 보면 향수를 구성하는 용질과 용매 중에서 용질에 해당하는 조합향료의 형태를 먼저 파악해야 합니다. <br>
+                조합향료는 조향사들이 천연 향료, 케미컬, 베이스 향료를 이용해 만들어내는 완셩된 향입니다. <br>
+                이처럼 다양한 단일 향료들이 조합되어 만들어지는데 단일향료들은 모두 향료의 특성에 따라 분자식과 분자량을 가지고 있습니다. <br>
+                분자량 크기에 따라 향이 휘발되는 시간이 각기 다르고, 이 성질을 이용해 첫, 중간, 마지막 부분에 어떤 느낌의 향을 표현하고 싶은지 컨트롤 할 수 있다는 것입니다.
+            </p>
+            <br><br>
+            <hr><br><br><br>
+       </div>
+       <div id="note1">
+            <h2>TOP NOTE</h2>
+            <h5>탑노트</h5><br>
+            <p>
+                탑노트는 최초 펌핑 후 30분 까지 나는 향을 일컫는 말입니다. <br>
+                30분까지라고 일컫기는 하지만 보통 향수의 첫 향은 5~10분 정도 지속되며, 향수의 첫 인상을 결정하는 노트라고 볼 수 있습니다.  <br>
+                향수의 경우 기본적으로 여러 향료의 조합으로 구성되기 때문에 그 중에서 임팩트가 가장 강한 향입니다. <br>
+                톱노트의 경우 향료는 대체적으로 휘발성이 좋은 향료를 사용합니다. <br>
+                주로 사용되는 향조는 시트러스계열의 레몬, 베르가뭇, 오렌지 등이 사용되고, 프루티 노트가 사용되기도 합니다.
+                <br>
+            </p><br><br>
+       </div>
+       <div id="note2">
+            <h2>MIDDLE NOTE</h2>
+            <h5>미들노트</h5><br>
+            <p>
+                미들노트는 발향의 중간에서 나타나는 향으로 향의 구성의 심장부에 있음을 지칭하기 때문에 하트노트(heart note)라고도 불립니다.<br>
+                조향사가 창조한 이미지의 향조가 가장 잘 나타나는 단계로 펌핑후 30분~4시간 사이에 나는 향을 보통 미들노트라 합니다. <br>
+                조향사의 개성과 향수의 컨셉, 그리고 성격을 가장많이 담고 있는 노트입니다.<br>
+                미들노트의 경우 사용되는 향료는 휘발성과 보유성이 중간정도 있는 향료가 사용됩니다.<br>
+                대표적으로 사용되는 미들노트로는 4대 플로럴이라 불리는 재스민, 로즈, 뮤게, 라일락 등이 사용됩니다.<br>
+                <br>
+            </p><br><br>
+        </div>
+        <div id="note3">
+            <h2>BASE NOTE</h2>
+            <h5>베이스노트</h5><br>
+            <p>
+                베이스 노트는 가장 마지막에 남는 향조로 라스트노트(last note)라고도 불립니다.<br>
+                펌핑 후 4시간 이후에 남는 보통 은은하게 남는 향을 말합니다. <br>
+                마지막 까지 지속력이 있어야하므로 보유성이 강한 향이 사용됩니다. <br>
+                주로 사용되는 것이 애니멀 노트이며,
+                무스크, 캐스토리움, 시벳, 앰버그리스 등의 애니멀 노트들은 보유성이 매우 뛰어나 베이스 노트로 많이 사용됩니다.<br>
+                그 밖에 우디 노트와 다른 노트들도 사용이 됩니다. <br>
+                향료의 구성을 보면 알 수 있지만 대체적으로 따뜻한 느낌을 주는 향료들이 주로 사용됩니다.<br>
+                이런 종류의 향료는 대체로 향의 여운이 길으므로 흔히 '트레일(Trail)'이 길다고 표현합니다.<br>
+                <br>
+            </p><br><br>
+       </div>
+       <hr>
+
+<!--TOP NOTE-->
+       <div id="topNote">
+        <h2>FOR TOP NOTE</h2><br><br>
+            <div id="topNote1">
+                <h4>시트러스(Citrus)</h4><br><br>
+                 <p><b>Natural oil : </b> lemon, mandarine, orange, grapefruit, lemon, grass oil</p>
+                 <p><b>chemical : </b> Citral, linalyl acetate, linalool, citronellol etc...</p>
+                 <br>
+                 <img src="./image/info_top1.jpg" alt="시트러스1">
+                 <img src="./image/info_top2.jpg" alt="시트러스2">
+                 <p class="noteExplain">
+                    <br>
+                    Citrus는 사전적 의미로 "감귤류, 밀감속"이란 뜻이며, 풋풋하고 싱싱하며, 청량감있는 향을 의미합니다.<br>
+                    쉽게 설명하면 오렌지나 자몽같은 상큼하고 톡 쏘는 향입니다. <br>
+                    가볍고 상쾌한 시트러스 계열의 향을 휘발성이 강해서 처음 뿌렸을 때 빨리 확산되는 편입니다.<br>
+                    하지만 지속력이 짧은게 단점이므로 top note에서 많이 사용됩니다.<br>
+                    <br><br>
+                    여름에 기분 전환용으로 여성 향수 뿐 아니라 남성의 향수에도 많이 사용되느 편입니다.<br>
+                    향수의 향이 강하지 않아서 처음 향을 입문하는 사람들도 편히 쓸 수 있습니다.<br><br>
+                 </p>
+                 <br>
+            </div>
+            <br><br><br>
+            <div id="topNote2">
+                <h4>프루티(fruity)</h4><br><br>
+                 <img src="./image/info_top3.jpg" alt="프루티1">
+                 <img src="./image/info_top4.jpg" alt="프루티2">
+                 <p class="noteExplain">
+                    <br>
+                    복숭아, 무화과, 자두, 라즈베리, 블랙베리 등과 같이 감귤류 외의 과일들을 프루티 계열이라고 합니다.<br>
+                    같이 탑노트로 사용되는 시트러스 계열을 제외한 과일향이라고 할 수 있습니다.<br>
+                    
+                    최근 인기 있는 프루티 계열로는 열대 과일향이 인기가 많아져 자주 사용된다고 합니다. <br>
+                    프루티 계열은 달콤하고 상큼한 향이 특징이라 강한 향이 부담스러운 향수 입문자들이 사용하기 좋은 향수입니다.<br>
+                    <br><br>
+                    프루티 계열의 향은 종류가 다양하기 때문에 다른 계열과 섞어서 상쾌한 느낌으로 사용할 수 있고, 텍스처를 줄때 사용합니다. <br><br>
+                 </p>
+                 <br>
+            </div>
+            <br><br><br>
+
+            <div id="topNote3">
+                <h4>그린(Green)</h4><br><br>
+                 <img src="./image/info_top5.jpg" alt="그린1">
+                 <img src="./image/info_top6.jpg" alt="그린2">
+                 <p class="noteExplain">
+                    <br>
+                    그린 계열의 노트는 마치 숲 속에 들어간 듯 시원한 자연의 향을 재현한 계열입니다. <br>
+                    풀을 베거나 손으로 비볐을때, 나는 풋풋한 내음, <br>
+                    한 여름의 산에 올라갔을 때의 신선함, 나뭇잎, 나뭇가지, 풀 등에서 맡을 수 있는 초록의 이미지로 느껴진느 향이 그린 노트라고 볼 수 있습니다. <br>
+                    깔끔하고 상쾌한 느낌을 주는 그린 계열은 청량하기 때문에 주로 탑 노트에 많이 사용됩니다. <br>
+                    싱그럽고 부담스럽지 않은 향으로 대중적으로 널리 사용되고 있는 향으로 젊은 세대에게 인기가 많습니다. <br>
+                    시트러스와 같이 상쾌한 향이지만 조금 더 개성이 강하고 고급스러운 느낌이며 , 여러 계열과 자연스럽게 어울려 향수의 다양한 베리에이션으로 사용되고 있습니다.<br>
+                    <br><br>
+                    주원료는 바이올렛 잎에서 추출한 정유나 피스타치오, 갈바늄, 제라늄 등이 사용되고 있습니다. <br><br>
+                 </p>
+                 <br>
+            </div>
+            <br><br><br>
+        </div>
+
+
+<!--MIDDLE NOTE-->
+
+       <div id="middleNote">
+        <h2>FOR MIDDLE NOTE</h2><br><br>
+             <div id="middle1">
+                <h4>장미(Rose)</h4><br><br>
+                 <img src="./image/info_middle1.jpg" alt="로즈1">
+                 <img src="./image/info_middle2.jpg" alt="로즈2">
+                 <p class="noteExplain">
+                    <br>
+                    장미는 싱글 플로럴 계열 중 대표적인 향으로 많은 사람들에게 사랑을 받고 있는 노트입니다.
+                    <br>
+                    로즈 계열은 많은 향수에 쓰이지만 천연 향료는 비싸서 
+                    Phenyl Ethyl Acetate, Rose Oxide, Nerol, Geranyl Acetate Rhodinol등 케미컬 향료가 쓰이는 편입니다.<br>
+                    장미가 주는 이미지처럼 고혹적이고 관능적인 향을 만들어낼 수도 있으며
+                     실제로는 매우 프레시한 그린 계열의 향이기 때문에 산뜻하고 플로럴한 향 표현이 가능합니다.
+                    <br><br>
+                 </p>
+                 <br>
+            </div>
+            <br><br><br>
+            <div id="middle2">
+                <h4>뮤게(Muguet)</h4><br><br>
+                 <img src="./image/info_middle3.jpg" alt="뮤게1">
+                 <img src="./image/info_middle4.jpg" alt="뮤게2">
+                 <p class="noteExplain">
+                    <br>
+                    뮤게는 싱글 플로럴 계열 중 하나로 , 프랑스 어로는 은방울꽃, Lily of Valley를 뜻하는 단어입니다.<br>
+                    은방울꽃은 5-6월에 피는 백합과의 여러해살이 꽃으로 향기가 은은해서 고급향수를 만드는데 재료로 사용되기도 합니다. <br>
+                    신선하고 청초한, 깨끗한 향기가 특징인 향기 계열이며, 천연으로 얻기 힘들어 장미와 같이 케미컬 향료를 주로 사용합니다.<br>
+                    뮤게는 Rhndinol, phenyl ethyl phenyl acetate, PEDMC, Phenyl ethyl lso butyrate, benzyl benzoate등의 케미컬로 만들 수 있습니다.<br> 
+                    <br><br>
+                 </p>
+                 <br>
+            </div>
+            <br><br><br>
+            <div id="middle3">
+                <h4>스파이시(Spicy)</h4><br><br>
+                 <img src="./image/info_middle5.jpg" alt="스파이시1">
+                 <img src="./image/info_middle6.jpg" alt="스파이시2">
+                 <p class="noteExplain">
+                    <br>
+                    스파이시 계열의 향은 주로 시나몬, 정향, 후추, 생강 등의 향신료 향기를 뜻합니다. <br>
+                    계피류의 향은 달콤한 느낌이 나고, 생강이나 후추류의 향은 차가운 느낌이기 때문에 취향에 따라 원하는 향료로 터치하면 다른 느낌의 스파이시 노트를 가진 향수가 생성됩니다.<br>
+                    플로럴 계열이나 우디 계열의 향에 깊이감과 톡쏘는 느낌을 주고자 할 때도 많이 사용됩니다.<br>
+                    <br><br>
+                    관능적이고 유혹적인 느낌이 강한 스파이시 계열의 노트는 여성 향수에서 많이 쓰이지만 중후한 매력이 있기 때문에 남성 향수에서도 많이 쓰입니다.<br>
+                    이 계열의 노트는 흔히, 오리엔탈 적인 향기의 이미지에 속하는데, 중동이나 극동 지역의 이국적인 향기를 떠올리면 이해하기 쉬울 것입니다.<br>
+                 </p>
+                 <br>
+            </div>
+            <br><br><br>
+            <div id="middle4">
+                <h4>시프레(Chypre)</h4><br><br>
+                 <img src="./image/info_middle7.jpg" alt="시프레1">
+                 <img src="./image/info_middle8.jpg" alt="시프레2">
+                 <p class="noteExplain">
+                    <br>
+                     시프레의 어원은 지중해에 위치한 키프로스 섬을 지칭하며, 이 섬에 갔을때 맡은 향의 이미지를 표현한 향이라고 합니다.<br>
+                     시프레 향의 원료는 키프로스 섬에서 자라는 떡갈나무 이끼에서 추출한 오크 모스라고 불리는 성분입니다.<br>
+                     시프레 계열은 오크모스, 패츌리 등을 기본으로 하고 있습니다.<br>
+                     이 노트는 다른 계열의 향과 어우러져 시프레 프루티, 시프레 플로럴, 시프레 프레쉬, 시프레 플로럴 레더 계열 등으로 나눌 수 있습니다.<br> 
+                    <br><br>
+                   시프레 계열은 20대 초반 보다는 30대이상의 차분하고 고급스러운 향을 선호하는 사람에게 잘 어울립니다.<br>
+                 </p>
+                 <br>
+            </div>
+            <br><br><br>
+       </div>
+   
+<!--BASE NOTE-->   
+       <div id="baseNote">
+            <h2>FOR BASE NOTE</h2><br><br>
+            <div id="base1">
+                <h4>우디(Woody)</h4><br><br>
+                 <br>
+                 <img src="./image/info_base1.jpg" alt="우디1">
+                 <img src="./image/info_base2.jpg" alt="우디2">
+                 <p class="noteExplain">
+                    <br>
+                    우디향은 이름에서 알 수 있는 것처럼 나무의 향기를 뜻합니다. <br>
+                    숲에 갔을 때 나는 신선한 향기, 또는 연필을 깎거나 나무를 자를 때 나는 중후한 향기를 말합니다.<br>
+                    나무의 이미지처럼 부드럽고 따뜻한 향입니다.<br>
+                    우디 계열은 대체로 중후한 향으로 잔향이 무겁게 남아 지속력이 좋은 편입니다.<br>
+                    그래서 다른 계열을 돋보이게 해주는 미들, 베이스 노트에 많이 사용됩니다.<br>
+                    주로 남성용 향수에 많이 쓰이지만, 요즘은 여성용 향수에도 무게감을 주기 위해 쓰이는 고급스럽고 매력있는 향입니다.<br>
+                    <br><br>
+                    우디 계열 노트의 원료로는 주로 샌달 우드(Sandal wood), 시더 우드(Ceadar wood), 삼나무(Cedar), 패출리(Patchouli) , 베티버(Vetiver), 과이악 우드(Guaiacwood) 등이 있습니다.
+                 </p>
+                 <br>
+            </div>
+            <br><br><br>
+            <div id="base2">
+                <h4>머스크(Musk)</h4><br><br>
+                 <br>
+                 <img src="./image/info_base3.jpg" alt="머스크1">
+                 <img src="./image/info_base4.jpg" alt="머스크2">
+                 <p class="noteExplain">
+                    <br>
+                    동물성 향료의 하나로 사향사슴, 사향 고양이, 루이지애나 사향쥐의 분비물을 채취 원료로서 사용합니다.<br>
+                    사향은 그 자체로는 향기가 고약하지만 알코올에 희석시키면 좋은 향으로 변하게 됩니다.<br>
+                    1979년에 사향 사슴이 멸종 위기 종으로 보호된 이후, 이를 구하기 어려워지자 88넌에 앨버트 바우어란 과학자에 의해 인공적인 머스크 향을 발견하게 됩니다.<br>
+                    TNT,다이너마이트 실험 도중 우연히 머스크 향을 합성하는데 성공하지만 이 물질은 환경에 축적되어 분해되지 않기 때문에 사용을 금지합니다.<br>
+                    나중에 Polycyclic musk와 Macrocyclic musk가 개발되는데, 이중 첫번째 머스크 향이 우리가 일반적으로 사용하는 머스크 향수입니다.<br>
+                    <br><br>
+                    머스크는 여름보다는 찬 바람이 부는 계절에 많이 찾게 되는 향기라고 할 수 있으며 따뜻하고 관능적인 느낌이 나는 향기입니다.<br>
+                    여성 향수와 남성 향수 모두 많이 쓰이는 계열로 향수의 지속성을 높여주는 효과가 있습니다.
+                </p>
+                 <br>
+            </div>
+            <br><br><br>
+            <div id="base3">
+                <h4>엠버(Amber)</h4><br><br>
+                 <br>
+                 <img src="./image/info_base5.jpg" alt="엠버1">
+                 <img src="./image/info_base6.jpg" alt="엠버2">
+                 <p class="noteExplain">
+                    <br>
+                    Anbar는 '기름진', '향이 나는 기름진 것'이라는 뜻을 가지고 있습니다.<br>
+                    앰버가 들어간 향수들이 많이 존재하는데 이는 나무에서 나오는 송진이 땅에 떨어져서 묻힌 후 고온과 고압 조건을 받으며 1000년정도가 지나며 반화석화가 됩니다.<br>
+                    이런 지속적인 열과 압력을 1000년동안 더 받게 되면 호박이 만들어지게 됩니다.<br>
+                    과거에는 이 앰버에 질산을 혼합해 인공사향을 만들었는데. 향수에서의 앰버는 호박의 황금빛 따뜻함을 표현하기 위해서 만들어진 향입니다.<br>
+                    이 노트는 벤조인, 랍다넘, 바닐린의 조합을 통해서 생겨납니다.<br>
+                    이렇게 여러가지를 혼용해 다양한 느낌을 주는 것이 앰버 노트이며, 종합해보면 오리엔탈 느낌을 주는 관능적이고 따뜻한 느낌이 앰버노트가 들어가는 향수들이라고 할 수 있습니다.<br>
+                    </p>
+                 <br>
+            </div>
+            <br><br><br>
+       </div>
+</div>
+
+
+    <!--Scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>   
+  </body>
+</html>       
