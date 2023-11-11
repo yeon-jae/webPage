@@ -1,0 +1,7 @@
+#mbti_box { width: 429px; margin: 0 auto; }
+#mbti_title { margin: 50px 0 0 0; padding-bottom: 5px;	border-bottom: solid 2px #ffbe10; }
+#mbti_title span {	font-size: 20px; font-weight: bold; }
+#mbti_form { margin-top: 20px; }
+#mbti_form li { margin-top: 10px; }
+#mbti_form input {	width: 100%; height: 47px; }
+#next_btn{margin-top: 15px; margin-bottom: 50px;text-align: center;}
