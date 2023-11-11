@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Slider</title>
+    <style>
+        h1{color: white;}
+			.nav-container{display: flex;margin:0;padding:0;
+			background-color:rgb(75, 56, 241);list-style-type: none;}
+            .nav-item{ padding:15px;cursor:pointer;}
+            .nav-item a{text-align: center;text-decoration: none;
+                font-weight: bold;color: white;margin:5px;padding:10px 5px;}
+            .nav-item a:hover{
+                background:rgb(235, 235, 18);color:black;}
+            .item{margin-top: 100px; color:white;
+                 font-size:1.5em;line-height:40px;}
+            .item b{font-size:1.6em;}
+            body{
+                background-image: url('images/big/11.jpg');
+                background-size: cover;
+                background-repeat: no-repeat;
+                }
+            .button{
+                text-align: center; 
+            }
+    </style>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script>
+        $(document).ready(function () {
+            var width = $('[data-role="slider"]').attr('data-width');
+            var height = $('[data-role="slider"]').attr('data-height');
+            var count = $('[data-role="slider"] div.item').length;
+
+            $('[data-role="slider"]').css({
+                position: 'relative',
+                overflow: 'hidden',
+                width: width,
+                height: height
+            }).find('.container').css({
+                position: 'absolute',
+                width: count * width,
+                overflow: 'hidden'
+        
+            }).find('.item').css({
+                width: width,
+                height: height,
+                float: 'left'
+            });
+            var currentPage = 0;
+            var changePage = function () {
+                $('[data-role="slider"] > .container').animate({
+                    left: -currentPage * width
+                }, 500);
+            };
+            $('#left-button').click(function () {
+                if (currentPage > 0) { 
+                    currentPage = currentPage - 1;
+                    changePage();
+                }
+            });
+            $('#right-button').click(function () {
+                if (currentPage < count - 1) {
+                    currentPage = currentPage + 1;
+                    changePage();
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <nav>
+        <ul class="nav-container">
+                    <li class="nav-item"><a href="main.html">HOME</a></li>
+                    <li class="nav-item"><a href="define.html">COVID-19란?</a></li>
+                    <li class="nav-item"><a href="gallery.html">코로나19로 변화한 삶</a></li>
+                    <li class="nav-item"><a href="Post.html">포스트 코로나</a></li>
+                    <li class="nav-item"><a href="https://tv.naver.com/v/16842868">뉴스/보도자료</a></li>
+                    <li class="nav-item"><a href="https://corona-live.com/">COVID-19 LIVE</a></li>
+                    <li class="nav-item"><a href="Add.html">ADD</a></li>
+        </ul>
+</nav>
+    <h1>코로나19로 인한 우려할 점</h1>
+    <div data-role="slider" data-width="1500" data-height="600">
+        <div class="container">
+            <div class="item">
+                <h2>1. Consumer trend - Untact</h2>
+                <p> 
+                        공급자와 소비자가 만나지 않고 소비를 할 수 있게 하는 언택트 소비의 가장 전형적인 예: 키오스크(Kiosk)(무인 자동 주문)
+                        <br>패스트푸드점이나 영화관 등에서 접대원에게 직접 주문하는 대신 터치 몇 번으로 주문할 수 있게 변화했다.
+                        <br>코로나로 인해 언택트의 방식이 많이 사용되게 되었고 이 방식은 소비를 넘어서 사회 전반적으로 번지는 추세이다.
+                        <br>언택트 소비가 늘어난다고 해서 오프라인에서의 소비, 대인 관계가 소멸될 것이라고 보지는 않는다.
+                        <br>소비 분야를 예로 든다면 언택트 소비가 활성화된다는 것은 온라인으로 충분히 물건을 구입할 수 있다. 
+                        <br> 온라인 소비가 소비 그 자체에 집중하는 목적 지향적인 것이 된다면, 
+                        <br> 오프라인 소비활동은 무엇인가를 구입하는 것이 아니라 경험하고 체험하는 것으로 변할 것이다. <br>
+                          언택트 사회는 오프라인의 종말을 뜻하는 것이 아니라 <b>오프라인과 온라인의 분리</b> , 나아가 서로 다른 목적을 가지는 것으로 변화한다는 얘기이다.
+                </p>
+            </div>
+            <div class="item">
+                <h2> 2. Ongoing crisis : 지속될 경제 위기</h2>
+                <p>
+                        정부에서는 ‘L자형’ 침체, 급격히 하락한 경기침체가 장기화할 수도 있다고 얘기하기 시작했다. 
+                        <br> 그러나 L자형 침체를 넘어서 기존의 위기를 뛰어넘는 위기가 올 수 있다고 한다.
+                         <br>3100조원이 넘는 기업·가계 대출, 지난 3년간 꾸준히 하락해온 경제성장률, 급격히 악화한 국가채무비율, 
+                         <br> 결코 안심할 수 없는 외환보유액, 모든 부문에서 경고등이 울리고 있다.
+                         <br>기존의 경제 정책 기조를 수정하고 <b> 전환해야 할 시간</b>이 왔다. 
+                         <br> 그간 소득주도성장, 일자리 확충을 중심으로 이뤄졌던 정책 기조를 위기 탈출을 위한 개혁·투자 중심으로 전환해야 한다는 것이다.
+                </p>
+            </div>
+            <div class="item">
+                <h2>3. Virus Outbreak : 재출현할 신종 감염병</h2>
+                <P>
+                        코로나19로 인한 위기는 완전히 새로운 것이 아니다. 지난 메르스, 사스때와 같이 발병하던 바이러스들이 변종해서 나타나고 있는 것이다.
+                        <br> 신종 바이러스의 기원을 찾다 보면 신종 감염벼의 발발이 한두 번의 사례로 끝날 일이 아니라는 점이 명확하다
+                        <br> 그러나 야생동물과 인간의 접촉 기회가 날이 갈수록 늘고 있다. 야생동물의 서식지가 파괴되는 것도 한 원인이다. 
+                        <br> 한번 발병한 변종 바이러스는 쉽게 없어지지 않는다. 국제 교류가 활성화된 지금에 와서는 바이러스가 전 세계로 퍼지는 것은 단지 시간의 문제다.
+                        <br> 세계관광기구(UNWTO)의 연간 보고서에 따르자면 1950년 2520만명이었던 전 세계 해외여행 인구는 2018년 14억명으로 크게 늘었다. 
+                        <br>사스가 유행했던 2003년만 해도 6억9460만명이었지만 15년 사이 2배 넘게 늘어난 것이다.
+                        <br> 이런 상황에서 코로나19와 같은, 코로나19를 넘어서는 <b> 신종 감염병은 언제든 다시 또 생겨날 수 있다.</b> 
+                        <br> 전염성과 치명률이 얼마나 높으냐의 문제일 뿐이다. 
+                        
+                </P>
+            </div>
+            <div class="item">
+                <h2>4.Depression: Corona blue & Corona red</h2>	
+                <p>
+                        코로나19로 인해 전염성 강한 질병으로 인해 고립되어 있는 상황에서는 우울감이 생기는 것이 당연하다.
+                        <br> 문제는 이 우울감이 사태가 진정되고 나서도 이어지지 않도록 주의해야 한다.
+                        <br>일상적인 우울감이 병리적인 우울증으로 발전하는 요인은 다양하다. 개인적인 정신 건강의 문제가 원인이 될 수도 있다.
+                        <br> 그러나 더 중요한 것은 환경적인 부분이다. 
+                        <br> 재난 상황이 끝나고 나서도 해결되지 않는 경제적인 문제, 재난으로 입은 신체적·물질적 피해와 지속적인 스트레스,
+                        <br> <b>해소되지 않는 사회적 불안 </b> 같은 것이다. 
+                        <br> 결국 재난으로 인한 사회적 문제가 해결되지 않으면 개인들에게 다시 영향을 미칠 수 있다.
+                </p>
+            </div>
+
+        </div>
+    </div>
+        <button id="left-button">←</button>
+        <button id="right-button">→</button>
+
+</body>
+
+    <div class="button">
+        <a href="Post.html">
+         <input type="button" value="코로나 그 이후의 삶은?"
+        style="width: 200px;height: 100px; font-size:1.1em;
+        background-color:transparent; color:white; border-radius:30px;
+        border:2px solid white;" >
+       </a>
+    </div>
+    
+
+</html>
