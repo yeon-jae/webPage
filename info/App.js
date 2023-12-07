@@ -10,6 +10,7 @@ export default function App() {
       <View>
         <Text>List of goals...</Text>
         <Text>List of todo list</Text>
+        <Text>how are you????</Text>
       </View>
     </View>
 
