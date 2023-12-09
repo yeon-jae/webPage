@@ -1,4 +1,4 @@
-import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Button, StyleSheet, Text, TextInput, View,ScrollView } from 'react-native';
 import { useState } from 'react';
 
 export default function App() {
@@ -26,15 +26,16 @@ export default function App() {
         />
       </View>
       <View style={styles.goalsContainer}>
+      <ScrollView alwaysBounceHorizontal={false}>
         {cousreGoals.map((goal) =>
         (
           <View key={goal}style={styles.goalItem}>
             <Text style={styles.goalText}>{goal}</Text>
           </View>
           ))}
-        
-       
+      </ScrollView>
       </View>
+     
     </View>
 
   );
